@@ -1235,9 +1235,13 @@ body{
   --cna-sage: #5F7C4B;
   --cna-sage-tint: rgba(95, 124, 75, 0.10);
   --cna-sage-line: rgba(95, 124, 75, 0.28);
-  --cna-steel: #3D6F87;
-  --cna-steel-tint: rgba(61, 111, 135, 0.10);
-  --cna-steel-line: rgba(61, 111, 135, 0.28);
+  /* Slate — low-saturation blue-gray for Trustworthy FRS. Kept intentionally
+     desaturated so it reads as "gray-professional" next to PML's saturated
+     Teal instead of just "another blue"; hue distance is only ~28° from Teal
+     so the differentiation carries on chroma + lightness, not hue alone. */
+  --cna-slate: #4E5A6B;
+  --cna-slate-tint: rgba(78, 90, 107, 0.10);
+  --cna-slate-line: rgba(78, 90, 107, 0.28);
 }
 /* PML (teal) */
 .cna-card[data-series="pml"] .cna-chip-seminar{
@@ -1270,14 +1274,16 @@ body{
 .cna-card[data-series="spring-summer"]{
   box-shadow: inset 3px 0 0 var(--cna-plum, #7B3F71);
 }
-/* Trustworthy FRS (steel blue) — security/certification theme */
+/* Trustworthy FRS (slate blue-gray) — professional / certification theme,
+   deliberately low saturation so it reads as "neutral cool" next to PML's
+   saturated teal, avoiding the earlier steel-vs-teal blue-family clash. */
 .cna-card[data-series="trustworthy-frs"] .cna-chip-seminar{
-  background: var(--cna-steel-tint);
-  border-color: var(--cna-steel-line);
-  color: var(--cna-steel);
+  background: var(--cna-slate-tint);
+  border-color: var(--cna-slate-line);
+  color: var(--cna-slate);
 }
 .cna-card[data-series="trustworthy-frs"]{
-  box-shadow: inset 3px 0 0 var(--cna-steel);
+  box-shadow: inset 3px 0 0 var(--cna-slate);
 }
 
 /* ---------- Seminar container: three view modes ---------- */
